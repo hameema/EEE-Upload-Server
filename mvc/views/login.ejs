@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="../fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../fonts/fontawesome5-overrides.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/mdb.min.css" />
+  </head>
+
+  <body class="bg-gradient-primary">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+              <div class="row">
+                <div class="col-lg-6 col-lg-12 col-12">
+                  <div class="p-5">
+                    <div class="text-center">
+                      <h4 class="text-dark mb-4">Welcome Back!</h4>
+                      <% if (message) { %>
+                      <div class="alert alert-primary" role="alert">
+                        <%= message %>
+                      </div>
+                      <% } %>
+                    </div>
+                    <form class="user" method="post" action="/login">
+                      <div class="form-group">
+                        <input
+                          class="form-control form-control-user"
+                          type="text"
+                          data-toggle="tooltip"
+                          data-bs-tooltip=""
+                          id="exampleInputEmail"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter Username"
+                          name="username"
+                          required=""
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          class="form-control form-control-user"
+                          type="password"
+                          id="exampleInputPassword"
+                          placeholder="Password"
+                          name="password"
+                          required=""
+                        />
+                      </div>
+                      <div class="form-group"></div>
+                      <button
+                        class="btn btn-primary btn-block text-white"
+                        type="submit"
+                      >
+                        Login
+                      </button>
+                      <hr />
+                    </form>
+                    <div class="text-center">
+                      <a
+                        class="small"
+                        onClick="alert('Please contact with your Admin');"
+                        >Forgot Password?</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.js"></script>
+    <script src="../js/script.min.js"></script>
+  </body>
+</html>
