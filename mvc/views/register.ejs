@@ -8,7 +8,7 @@
     />
     <title>Register New User</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../css/mdb.css" />
+    <link rel="stylesheet" href="../../css/mdb.min.css" />
     <link rel="stylesheet" href="../../fonts/fontawesome-all.min.css" />
     <link rel="stylesheet" href="../../fonts/font-awesome.min.css" />
     <link rel="stylesheet" href="../../fonts/fontawesome5-overrides.min.css" />
@@ -20,188 +20,183 @@
     <script src="../../js/index.js"></script>
   </head>
   <body class="bg-gradient-primary">
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="card shadow-lg border-0 my-4">
-            <div class="card-body p-0 ">
-              <div class="row">
-                <div class="col-lg-6 col-lg-12 col-12">
-                  <div class="px-5 pt-3 pb-4">
-                    <div class="text-center">
-                      <h4 class="text-dark mb-4">Register New User</h4>
-                      <% if (message) { %>
-                      <div class="alert alert-primary" role="alert">
-                        <%= message %>
-                      </div>
-                      <% } %>
-                    </div>
-                    <form class="user" method="post" action="/register">
-                      <div class="form-group">
-                        <input
-                          class="form-control form-control-user"
-                          type="text"
-                          data-toggle="tooltip"
-                          data-bs-tooltip=""
-                          id="exampleInputEmail"
-                          aria-describedby="emailHelp"
-                          placeholder="Enter Username"
-                          name="username"
-                          required=""
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          class="form-control form-control-user"
-                          type="password"
-                          id="exampleInputPassword"
-                          placeholder="Password"
-                          name="password"
-                          required=""
-                        />
-                      </div>
-                      <div>
-                        <div class="">
-                          <div class="form-group">
-                            <select
-                              id="select-state"
-                              name="subjects"
-                              multiple
-                              class="demo-default"
-                              placeholder="Subjects can Access..."
-                              required
-                            >
-                              <option value="200">EE200</option>
-
-                              <option value="201">EE201</option>
-
-                              <option value="202">EE202</option>
-
-                              <option value="219">EE219</option>
-
-                              <option value="234">EE234</option>
-
-                              <option value="302">EE302</option>
-
-                              <option value="303">EE303</option>
-
-                              <option value="304">EE304</option>
-
-                              <option value="311">EE311</option>
-
-                              <option value="313">EE313</option>
-
-                              <option value="316">EE316</option>
-
-                              <option value="319">EE319</option>
-
-                              <option value="331">EE331</option>
-
-                              <option value="334">EE334</option>
-
-                              <option value="342">EE342</option>
-
-                              <option value="352">EE352</option>
-
-                              <option value="362">EE362</option>
-
-                              <option value="413">EE413</option>
-
-                              <option value="416">EE416</option>
-
-                              <option value="419">EE419</option>
-
-                              <option value="421">EE421</option>
-
-                              <option value="423">EE423</option>
-
-                              <option value="429">EE429</option>
-
-                              <option value="432">EE432</option>
-
-                              <option value="433">EE433</option>
-
-                              <option value="434">EE434</option>
-
-                              <option value="442">EE442</option>
-
-                              <option value="443">EE443</option>
-
-                              <option value="445">EE445</option>
-
-                              <option value="446">EE446</option>
-
-                              <option value="448">EE448</option>
-
-                              <option value="563">EE563</option>
-
-                              <option value="562">EE562</option>
-
-                              <option value="561">EE561</option>
-
-                              <option value="552">EE552</option>
-
-                              <option value="551">EE551</option>
-
-                              <option value="548">EE548</option>
-
-                              <option value="542">EE542</option>
-
-                              <option value="535">EE535</option>
-
-                              <option value="532">EE532</option>
-
-                              <option value="526">EE526</option>
-
-                              <option value="524">EE524</option>
-
-                              <option value="521">EE521</option>
-
-                              <option value="519">EE519</option>
-
-                              <option value="516">EE516</option>
-
-                              <option value="513">EE513</option>
-
-                              <option value="491">EE491</option>
-
-                              <option value="463">EE463</option>
-
-                              <option value="461">EE461</option>
-
-                              <option value="452">EE452</option>
-
-                              <option value="451">EE451</option>
-
-                              <option value="449">EE449</option>
-                            </select>
-                          </div>
-                          <script>
-                            $("#select-state").selectize({
-                              maxItems: 5,
-                            });
-                          </script>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                      <button
-                        class="btn btn-primary btn-block text-white"
-                        
-                        type="submit"
-                      >
-                        Register
-                      </button>
-                      </div>
-                    </form>
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="row h-100 w-100 align-items-center justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-lg o-hidden border-0 my-4">
+            <div class="card-body p-0">
+              <div class="p-5">
+                <div class="text-center">
+                  <h4 class="text-dark mb-4">Register New User</h4>
+                  <% if (message) { %>
+                  <div class="alert alert-primary" role="alert">
+                    <%= message %>
                   </div>
+                  <% } %>
                 </div>
+                <form class="user" method="post" action="/register">
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control-user"
+                      type="text"
+                      data-toggle="tooltip"
+                      data-bs-tooltip=""
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Username"
+                      name="username"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control-user"
+                      type="password"
+                      id="exampleInputPassword"
+                      placeholder="Password"
+                      name="password"
+                      required=""
+                    />
+                  </div>
+                  <div>
+                    <div class="">
+                      <div class="form-group">
+                        <select
+                          id="select-state"
+                          name="subjects"
+                          multiple
+                          class="demo-default"
+                          placeholder="Subjects can Access..."
+                          required
+                        >
+                          <option value="200">EE200</option>
+
+                          <option value="201">EE201</option>
+
+                          <option value="202">EE202</option>
+
+                          <option value="219">EE219</option>
+
+                          <option value="234">EE234</option>
+
+                          <option value="302">EE302</option>
+
+                          <option value="303">EE303</option>
+
+                          <option value="304">EE304</option>
+
+                          <option value="311">EE311</option>
+
+                          <option value="313">EE313</option>
+
+                          <option value="316">EE316</option>
+
+                          <option value="319">EE319</option>
+
+                          <option value="331">EE331</option>
+
+                          <option value="334">EE334</option>
+
+                          <option value="342">EE342</option>
+
+                          <option value="352">EE352</option>
+
+                          <option value="362">EE362</option>
+
+                          <option value="413">EE413</option>
+
+                          <option value="416">EE416</option>
+
+                          <option value="419">EE419</option>
+
+                          <option value="421">EE421</option>
+
+                          <option value="423">EE423</option>
+
+                          <option value="429">EE429</option>
+
+                          <option value="432">EE432</option>
+
+                          <option value="433">EE433</option>
+
+                          <option value="434">EE434</option>
+
+                          <option value="442">EE442</option>
+
+                          <option value="443">EE443</option>
+
+                          <option value="445">EE445</option>
+
+                          <option value="446">EE446</option>
+
+                          <option value="448">EE448</option>
+
+                          <option value="563">EE563</option>
+
+                          <option value="562">EE562</option>
+
+                          <option value="561">EE561</option>
+
+                          <option value="552">EE552</option>
+
+                          <option value="551">EE551</option>
+
+                          <option value="548">EE548</option>
+
+                          <option value="542">EE542</option>
+
+                          <option value="535">EE535</option>
+
+                          <option value="532">EE532</option>
+
+                          <option value="526">EE526</option>
+
+                          <option value="524">EE524</option>
+
+                          <option value="521">EE521</option>
+
+                          <option value="519">EE519</option>
+
+                          <option value="516">EE516</option>
+
+                          <option value="513">EE513</option>
+
+                          <option value="491">EE491</option>
+
+                          <option value="463">EE463</option>
+
+                          <option value="461">EE461</option>
+
+                          <option value="452">EE452</option>
+
+                          <option value="451">EE451</option>
+
+                          <option value="449">EE449</option>
+                        </select>
+                      </div>
+                      <script>
+                        $("#select-state").selectize({
+                          maxItems: 5,
+                        });
+                      </script>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button
+                      class="btn btn-primary btn-block text-white"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-     <section class="">
+    <section class="">
       <!-- Footer -->
       <footer class="text-center text-white fixed-bottom bg-dark">
         <!-- Copyright -->
@@ -209,9 +204,14 @@
           class="text-center p-3"
           style="background-color: rgba(0, 0, 0, 0.2)"
         >
-           Designed By:
-          <a class="text-white" href="#"
-            >HD</a
+          This Project is Under MIT License Designed By:
+          <a class="hover-color" href="https://twitter.com/HameemDkl">HD</a>
+
+          |
+          <a
+            class="hover-color"
+            href="https://github.com/HameemDakheel/EEE-Upload-Server"
+            >Source Code</a
           >
         </div>
         <!-- Copyright -->

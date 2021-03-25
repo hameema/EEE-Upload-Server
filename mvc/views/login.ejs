@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Login</title>
-    
+
     <link rel="stylesheet" href="../fonts/fontawesome-all.min.css" />
     <link rel="stylesheet" href="../fonts/font-awesome.min.css" />
     <link rel="stylesheet" href="../fonts/fontawesome5-overrides.min.css" />
@@ -16,63 +16,59 @@
   </head>
 
   <body class="bg-gradient-primary">
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="row h-100 w-100 align-items-center justify-content-center">
+        <div class="col-md-8 col-lg-6">
           <div class="card shadow-lg o-hidden border-0 my-4">
             <div class="card-body p-0">
-              <div class="row">
-                <div class="col-lg-6 col-lg-12 col-12">
-                  <div class="px-5 pt-3 pb-4">
-                    <div class="text-center">
-                      <h4 class="text-dark mb-4">Welcome Back!</h4>
-                      <% if (message) { %>
-                      <div class="alert alert-primary" role="alert">
-                        <%= message %>
-                      </div>
-                      <% } %>
-                    </div>
-                    <form class="user" method="post" action="/login">
-                      <div class="form-group">
-                        <input
-                          class="form-control form-control-user"
-                          type="text"
-                          data-toggle="tooltip"
-                          data-bs-tooltip=""
-                          id="exampleInputEmail"
-                          aria-describedby="emailHelp"
-                          placeholder="Enter Username"
-                          name="username"
-                          required=""
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          class="form-control form-control-user"
-                          type="password"
-                          id="exampleInputPassword"
-                          placeholder="Password"
-                          name="password"
-                          required=""
-                        />
-                      </div>
-                      <div class="form-group"></div>
-                      <button
-                        class="btn btn-primary btn-block text-white"
-                        type="submit"
-                      >
-                        Login
-                      </button>
-                      <hr />
-                    </form>
-                    <div class="text-center">
-                      <a
-                        class="small"
-                        onClick="alert('Please contact with your Admin');"
-                        >Forgot Password?</a
-                      >
-                    </div>
+              <div class="p-5">
+                <div class="text-center">
+                  <h4 class="text-dark mb-4">Welcome Back!</h4>
+                  <% if (message) { %>
+                  <div class="alert alert-primary" role="alert">
+                    <%= message %>
                   </div>
+                  <% } %>
+                </div>
+                <form class="user" method="post" action="/login">
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control-user"
+                      type="text"
+                      data-toggle="tooltip"
+                      data-bs-tooltip=""
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter Username"
+                      name="username"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control-user"
+                      type="password"
+                      id="exampleInputPassword"
+                      placeholder="Password"
+                      name="password"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group"></div>
+                  <button
+                    class="btn btn-primary btn-block text-white"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                  <hr />
+                </form>
+                <div class="text-center">
+                  <a
+                    class="small"
+                    onClick="alert('Please contact with your Admin');"
+                    >Forgot Password?</a
+                  >
                 </div>
               </div>
             </div>
@@ -80,7 +76,7 @@
         </div>
       </div>
     </div>
-        <section class="">
+    <section class="">
       <!-- Footer -->
       <footer class="text-center text-white fixed-bottom bg-dark">
         <!-- Copyright -->
@@ -88,9 +84,14 @@
           class="text-center p-3"
           style="background-color: rgba(0, 0, 0, 0.2)"
         >
-           Designed By:
-          <a class="text-white" href="#"
-            >HD</a
+          This Project is Under MIT License Designed By:
+          <a class="hover-color" href="https://twitter.com/HameemDkl">HD</a>
+
+          |
+          <a
+            class="hover-color"
+            href="https://github.com/HameemDakheel/EEE-Upload-Server"
+            >Source Code</a
           >
         </div>
         <!-- Copyright -->
