@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../css/mdb.min.css" />
   </head>
-  
+
   <body class="bg-gradient-primary">
-    <div class="container mt-5">
+    <div class="container my-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <div class="card shadow-lg border-0 my-5">
+          <div class="card shadow-lg border-0 my-4">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item col-6 px-0" role="presentation">
                 <button
@@ -32,22 +32,22 @@
                   role="tab"
                   aria-controls="home"
                   aria-selected="true"
-                  >
+                >
                   Upload One File
                 </button>
               </li>
               <li class="nav-item px-0 col-6" role="presentation">
                 <button
-                class="nav-link w-100"
-                style="font-size: 1rem"
-                id="profile-tab"
-                data-bs-toggle="tab"
+                  class="nav-link w-100"
+                  style="font-size: 1rem"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
                   data-bs-target="#profile"
                   type="button"
                   role="tab"
                   aria-controls="profile"
                   aria-selected="false"
-                  >
+                >
                   Upload Multiple Files
                 </button>
               </li>
@@ -55,29 +55,29 @@
             <div class="card-body p-0">
               <div class="row">
                 <div class="col-lg-7 col-lg-12">
-                  <div class="p-5">
+                  <div class="px-5 pt-3 pb-4">
                     <div class="tab-content" id="myTabContent">
                       <div
-                      class="tab-pane fade show active"
-                      id="home"
-                      role="tabpanel"
-                      aria-labelledby="home-tab"
+                        class="tab-pane fade show active"
+                        id="home"
+                        role="tabpanel"
+                        aria-labelledby="home-tab"
                       >
-                      <div class="text-center">
-                        <h4 class="text-dark mb-4">Upload a Files!</h4>
-                      </div>
-                      <form
-                      class="user"
-                      ref="uploadForm"
-                      method="post"
-                      action="http://localhost:3000/upload"
-                      encType="multipart/form-data"
-                      id="form1"
-                      >
-                      <div class="form-group">
-                        <input
-                        class="form-control form-control-user"
-                        type="text"
+                        <div class="text-center">
+                          <h4 class="text-dark mb-4">Upload a Files!</h4>
+                        </div>
+                        <form
+                          class="user"
+                          ref="uploadForm"
+                          method="post"
+                          action="http://localhost:3000/upload"
+                          encType="multipart/form-data"
+                          id="form1"
+                        >
+                          <div class="form-group">
+                            <input
+                              class="form-control form-control-user"
+                              type="text"
                               required=""
                               placeholder="File Name"
                               name="filename"
@@ -85,83 +85,11 @@
                           </div>
                           <div class="form-group">
                             <select
-                            class="form-select"
-                            aria-label="Default select example"
-                            required
-                            name="filetype"
-                            >
-                            <option selected disabled>Select Type</option>
-                            <option value="document">Document</option>
-                            <option value="video">Video</option>
-                            <option value="book">Book</option>
-                            <option value="exam">Exam</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <select
                               class="form-select"
                               aria-label="Default select example"
                               required
-                              name="subject-id"
-                              >
-                              <option selected disabled>Select Subject</option>
-                              <% subjects.forEach(subject => { %>
-                                
-                                <option value="<%= subject %>">
-                                  EE<%= subject %>
-                                </option>
-                              <% }) %>
-                            </select>
-                          </div>
-                          <div class="form-group">
-                            <input
-                            type="file"
-                            id="singleInput"
-                            required
-                            name="uploads[]"
-                            class="form-control"
-                            />
-                          </div>
-                          <div class="form-group">
-                            <div class="progress" id="progress-bar1">
-                              <div
-                              class="progress-bar"
-                              role="progressbar"
-                              ></div>
-                            </div>
-                          </div>
-                          <button
-                            class="btn btn-primary btn-block"
-                            type="submit"
-                            >
-                            Upload File
-                          </button>
-                        </form>
-                      </div>
-                      <div
-                      class="tab-pane fade"
-                      id="profile"
-                      role="tabpanel"
-                      aria-labelledby="profile-tab"
-                      >
-                        <div class="text-center">
-                          <h4 class="text-dark mb-4">Upload Multiple Files!</h4>
-                        </div>
-                        <form
-                        class="user"
-                        ref="uploadForm"
-                        method="post"
-                        action="http://localhost:3000/upload"
-                        encType="multipart/form-data"
-                        id="form2"
-                        >
-                        <div class="form-group">
-                          <select
-                          class="form-select"
-                          aria-label="Default select example"
-                              required
                               name="filetype"
-                              >
+                            >
                               <option selected disabled>Select Type</option>
                               <option value="document">Document</option>
                               <option value="video">Video</option>
@@ -171,14 +99,14 @@
                           </div>
                           <div class="form-group">
                             <select
-                            class="form-select"
-                            aria-label="Default select example"
-                            required
-                            name="subject-id"
+                              class="form-select"
+                              aria-label="Default select example"
+                              required
+                              name="subject-id"
                             >
-                            <option selected disabled>Select Subject</option>
-                            <% subjects.forEach(subject => { %>
-                              
+                              <option selected disabled>Select Subject</option>
+                              <% subjects.forEach(subject => { %>
+
                               <option value="<%= subject %>">
                                 EE<%= subject %>
                               </option>
@@ -187,27 +115,98 @@
                           </div>
                           <div class="form-group">
                             <input
-                            type="file"
-                            required
-                            name="uploads[]"
-                            class="form-control"
-                            id="multipleInput"
-                              multiple=""
-                              />
+                              type="file"
+                              id="singleInput"
+                              required
+                              name="uploads[]"
+                              class="form-control"
+                            />
                           </div>
                           <div class="form-group">
-                            <div class="progress"
-                            id="progress-bar2">
+                            <div class="progress" id="progress-bar1">
                               <div
                                 class="progress-bar"
                                 role="progressbar"
-                                ></div>
-                              </div>
+                              ></div>
                             </div>
-                            <button
+                          </div>
+                          <button
                             class="btn btn-primary btn-block"
                             type="submit"
+                          >
+                            Upload File
+                          </button>
+                        </form>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="profile"
+                        role="tabpanel"
+                        aria-labelledby="profile-tab"
+                      >
+                        <div class="text-center">
+                          <h4 class="text-dark mb-4">Upload Multiple Files!</h4>
+                        </div>
+                        <form
+                          class="user"
+                          ref="uploadForm"
+                          method="post"
+                          action="http://localhost:3000/upload"
+                          encType="multipart/form-data"
+                          id="form2"
+                        >
+                          <div class="form-group">
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                              required
+                              name="filetype"
                             >
+                              <option selected disabled>Select Type</option>
+                              <option value="document">Document</option>
+                              <option value="video">Video</option>
+                              <option value="book">Book</option>
+                              <option value="exam">Exam</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                              required
+                              name="subject-id"
+                            >
+                              <option selected disabled>Select Subject</option>
+                              <% subjects.forEach(subject => { %>
+
+                              <option value="<%= subject %>">
+                                EE<%= subject %>
+                              </option>
+                              <% }) %>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <input
+                              type="file"
+                              required
+                              name="uploads[]"
+                              class="form-control"
+                              id="multipleInput"
+                              multiple=""
+                            />
+                          </div>
+                          <div class="form-group">
+                            <div class="progress" id="progress-bar2">
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                              ></div>
+                            </div>
+                          </div>
+                          <button
+                            class="btn btn-primary btn-block"
+                            type="submit"
+                          >
                             Upload Files
                           </button>
                         </form>
@@ -221,6 +220,23 @@
         </div>
       </div>
     </div>
+    <section class="">
+      <!-- Footer -->
+      <footer class="text-center text-white fixed-bottom bg-dark">
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+           Designed By:
+          <a class="text-white" href="#"
+            >HD</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </section>
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/jquery.easing.js"></script>
