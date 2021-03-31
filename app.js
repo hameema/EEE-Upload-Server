@@ -6,6 +6,7 @@ const path = require("path");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const serveIndex = require("serve-index");
 require("./mvc/config/db");
 require("./mvc/config/passport");
 
@@ -26,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(passport.initialize());
 
+app.use("/download", express.static(path.join(__dirname, "uploads")), serveIndex(path.join(__dirname, "uploads"), {"icons": true}));
 app.use("/", loginRouter);
 
 app.use(authCtrl.checkToken);
