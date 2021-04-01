@@ -5,7 +5,7 @@ Version 1.0.0
 	[here](https://www.mongodb.com/try/download/community)
 
 # Install NodeJS
-	[here](https://www.mongodb.com/try/download/community) is stable version.
+	[here](https://nodejs.org/en/download/) is stable version.
 
 # How to start 
 1. run MongoDB
